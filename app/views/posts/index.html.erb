@@ -1,0 +1,11 @@
+<% if @posts.blank? %>
+    <h1 class="text-center">Welcome!</h1>
+<% else %>
+    <%= @posts.each do |x| %>
+        <div class="white">
+          <%= image_tag x.image.url(:medium) %>
+          <br>
+          <%= x.description %>
+        </div>
+    <% end %>
+<% end %>
